@@ -35,6 +35,10 @@ sub walk_tree {
     if ( $type eq "workspace" ) {
         $depth = display_node( "Workspace $name ($layout - $orientation)", $depth );
     }
+    
+    if ( $type eq "output" ) {
+        $depth = display_node( "Output $name", $depth);    
+    }
 
     # if "type" is "con" (type for several kinds of containers)
     if ( $type eq "con" ) {
